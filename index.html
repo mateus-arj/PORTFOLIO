@@ -1,212 +1,292 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio Mateus Araújo</title>
-    <link rel="stylesheet" href="estilos/style.css" />
-    <link rel="shortcut icon" href="favicon.svg" type="image/svg" />
-    <script
-      src="https://kit.fontawesome.com/0c49ca79fb.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body class="escuro">
-    <header>
-      <nav id="menu">
-        <ul>
-          <li>
-            <a href="#ficha" class="link"><i class="fa-solid fa-house" ></i></a>
-          </li>
-          <li>
-            <a href="#skills" class="link"> <i class="fa-solid fa-brain"></i></a>
-          </li>
-          <li>
-            <a href="#formacao" class="link"><i class="fa-solid fa-graduation-cap"></i></a>
-          </li>
-          <li>
-            <a href="#projetos" class="link"><i class="fa-solid fa-trowel-bricks"></i></a>
-          </li>
-          <li>
-            <a href="" id="botao-tema" class="link" ><i class="fa-solid fa-moon"></i></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
 
-    <main>
-      <section id="ficha">
-        <img
-          src="imagens/mateus-foto.jpeg"
-          alt="gustavoguanabara"
-          class="foto"
-        />
-        <h1>Mateus Araújo</h1>
-        <p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portfólio Mateus Araújo</title>
+
+  <link rel="stylesheet" href="estilos/style.css">
+
+  <script
+    src="https://kit.fontawesome.com/0c49ca79fb.js"
+    crossorigin="anonymous">
+  </script>
+
+</head>
+
+<body class="escuro">
+
+  <!-- HEADER -->
+  <header>
+
+    <nav id="menu">
+
+      <ul>
+
+        <li>
+          <a href="#ficha" class="link">
+            <i class="fa-solid fa-house"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="#conteudo-tabs" class="link">
+            <i class="fa-solid fa-layer-group"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="" id="botao-tema" class="link">
+            <i class="fa-solid fa-moon"></i>
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- PERFIL -->
+    <section id="ficha">
+
+      <img
+        src="imagens/mateus-foto.jpeg"
+        alt="Mateus"
+        class="foto"
+      >
+
+      <h1>Mateus Araújo</h1>
+
+      <p>
         Sou uma pessoa dedicada, criativa e sempre em busca de evolução.
-Gosto de aprender com novos desafios e crescer a cada experiência.
-Tenho grandes objetivos para o futuro e busco me tornar minha melhor versão.
-Apaixonado por tecnologia e sempre em busca de novos desafios.
-        </p>
-        <div id="social">
-          <a
-            href="https://www.linkedin.com/in/mateus-araujo-3527753ba"
-            target="_blank"
-            rel="nofollow"
-          >
-            <i class="fa-brands fa-square-linkedin"></i>
-          </a>
-          <a
-            href="https://github.com/mateus-arj"
-            target="_blank"
-            rel="nofollow"
-          >
-            <i class="fa-brands fa-square-github"></i>
-          </a>
-          <a
-            href="https://wa.me/5588988730395"
-            target="_blank"
-            rel="nofollow"
-          >
-           <i class="fa-brands fa-square-whatsapp"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/mateus_araujo28?igsh=MTNmeTE4ZWt2OW8waA=="
-            target="_blank"
-            rel="nofollow"
-          >
-            <i class="fa-brands fa-square-instagram"></i>
-          </a>
-         
+        Gosto de aprender com novos desafios e crescer a cada experiência.
+        Tenho grandes objetivos para o futuro e busco me tornar minha melhor versão.
+        Apaixonado por tecnologia e sempre em busca de novos desafios.
+      </p>
+
+      <div id="social">
+
+        <a href="https://www.linkedin.com/" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+        <a href="https://github.com/" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a href="https://wa.me/" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a href="https://instagram.com/" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- CONTEÚDO -->
+    <section id="detalhes">
+
+      <article id="conteudo-tabs">
+
+        <!-- BOTÕES -->
+        <div class="tabs-botoes">
+
+          <button class="tab-btn ativo" data-tab="skills">
+            <i class="fa-solid fa-brain"></i>
+            Skills
+          </button>
+
+          <button class="tab-btn" data-tab="projetos">
+            <i class="fa-solid fa-trowel-bricks"></i>
+            Projetos
+          </button>
+
+          <button class="tab-btn" data-tab="certificados">
+            <i class="fa-solid fa-certificate"></i>
+            Certificados
+          </button>
+
+          <button class="tab-btn" data-tab="formacao">
+            <i class="fa-solid fa-graduation-cap"></i>
+            Formação
+          </button>
+
         </div>
-      </section>
 
-      <section id="detalhes">
-        <article id="video">
-          <h2><i class="fa-solid fa-handshake"></i>deixe-me apresentar</h2>
-          <div class="video-container">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/vl0eatPehLs?si=FgNYR9djkIGF1DxG"
-              title="YouTube video player"
-              frameborder="0"
-              allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-                web-share;
-              "
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </article>
-        <!--fim article#video-->
+        <!-- ÁREA DOS CONTEÚDOS -->
+        <div class="tabs-conteudo">
 
-        <article id="skills">
-          <h2><i class="fa-solid fa-brain"></i>minhas skills</h2>
+          <!-- SKILLS -->
+          <div class="tab-item ativo" id="skills">
 
-          <div id="skill-container">
-            <div class="item">
-              <div class="info">
-                <span class="nome"><i class="fa-solid fa-code"></i> HTML</span>
-                <span class="porcent"> 90% </span>
-              </div>
-              <div class="barra">
-                <div class="progresso" style="width: 90%;"></div>
-              </div>
-            </div>
+            <h2>
+              <i class="fa-solid fa-brain"></i>
+              Minhas Skills
+            </h2>
 
- <div class="item">
-              <div class="info">
-                <span class="nome"><i class="fa-solid fa-code"></i> CSS </span>
-                <span class="porcent"> 90% </span>
+            <div id="skills-grid">
+
+              <!-- HTML -->
+              <div class="skill-card">
+
+               <i class="fa-brands fa-html5 fa-2xl" style="color: #f46528;"></i>
+
+                <h3>HTML</h3>
+
               </div>
-              <div class="barra">
-                <div class="progresso" style="width: 90%;"></div>
+
+              <!-- CSS -->
+              <div class="skill-card">
+
+                <i class="fa-brands fa-css3-alt fa-2xl" style="color: rgb(33, 29, 170);"></i>
+
+                <h3>CSS</h3>
+
               </div>
+
             </div>
 
           </div>
-        </article>
-        <!--fim article#skills-->
 
-        <article id="formacao">
-          <h2><i class="fa-solid fa-graduation-cap"></i>formação</h2>
-       
-       
-         <div id="formacao-container">
-            <div class="curso">
-              <p class="periodo">  Atualmente</p>
-              <h3 class="instituicao">Unigrande</h3>
-              <p class="titulacao">Engenharia de Software</p>
+          <!-- PROJETOS -->
+          <div class="tab-item" id="projetos">
+
+            <h2>
+              <i class="fa-solid fa-trowel-bricks"></i>
+              Meus Projetos
+            </h2>
+
+            <div id="projeto-container">
+<a href="https://mateus-arj.github.io/HTML-CSS/"  target="_blank">
+  
+                <div class="projeto">
+  
+                  <img
+                    src="imagens/htmlecss.png"
+                    alt=""
+                    class="foto-projeto"
+                  >
+  
+                  <div class="projeto-info">
+  
+                    <p class="periodo">
+                      2026
+                    </p>
+  
+                    <h3 class="titulo">
+                      HTML E CSS
+                    </h3>
+  
+                    <p>
+                      Projeto construído para treinar a criação
+                      de sites responsivos com HTML e CSS.
+                    </p>
+  
+                    <details>
+  
+                      <summary>
+                        Saiba mais
+                      </summary>
+  
+                      <p>
+                        Projeto criado durante os estudos
+                        de desenvolvimento web.
+                      </p>
+  
+                    </details>
+  
+                  </div>
+</a>
+
+              </div>
+
             </div>
-
-            
-
-         </div>
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-        </article>
-        <!--fim article#formacao-->
-
-        <article id="projetos">
-          <h2><i class="fa-solid fa-trowel-bricks"></i>projetos</h2>
-
-         <div id="projeto-container">
-          <div class="projeto">
-             <img src="imagens/htmlecss.png" alt="" class="foto">
-             <div class="projeto-info">
-              <p class="periodo">2022</p>
-              <h3 class="titulo">HTML E CSS</h3>
-              <p>projeto construido para treinar a construção de sites com HTML e CSS</p>
-              <details class="desclicao">
-                <summary>saiba mais</summary>
-                <p>são atividades realizadas através de curso que fui fazendo, como por exemplo o Curso em Video</p>
-              </details>
-
-
-             </div>
 
           </div>
 
+          <!-- CERTIFICADOS -->
+          <div class="tab-item" id="certificados">
 
-         </div>
+            <h2>
+              <i class="fa-solid fa-certificate"></i>
+              Meus Certificados
+            </h2>
+
+            <div class="certificado-card">
+
+              <h3>
+                HTML5 e CSS3
+              </h3>
+
+              <p>
+                Curso em Vídeo - Gustavo Guanabara
+              </p>
+
+              <span class="status">
+                Concluído
+              </span>
+
+            </div>
+
+          </div>
+
+          <!-- FORMAÇÃO -->
+          <div class="tab-item" id="formacao">
+
+            <h2>
+              <i class="fa-solid fa-graduation-cap"></i>
+              Minha Formação
+            </h2>
+
+            <div id="formacao-container">
+
+              <div class="curso">
+
+                <p class="periodo">
+                  Atualmente
+                </p>
+
+                <h3 class="instituicao">
+                  Unigrande
+                </h3>
+
+                <p class="titulacao">
+                  Engenharia de Software
+                </p>
+
+              </div>
 
 
+            </div>
 
-        </article>
-        <!--fim article#projetos-->
-      </section>
-    </main>
+          </div>
 
-    <footer>
-     portfólio desenvolvido por Mateus Araujo em 2026   
+        </div>
 
-    </footer>
+      </article>
 
-    <script src="scripts/script.js"></script>
-  </body>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+
+    portfólio desenvolvido por Mateus Araújo em 2026 🚀
+
+  </footer>
+
+  <script src="scripts/script.js"></script>
+
+</body>
+
 </html>
