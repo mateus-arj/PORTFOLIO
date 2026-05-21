@@ -119,3 +119,40 @@ botoesTabs.forEach(botao=>{
   });
 
 });
+
+// ===== CERTIFICADOS =====
+
+const botoesCert =
+document.querySelectorAll('.cert-btn');
+
+const areasCert =
+document.querySelectorAll('.cert-area');
+
+botoesCert.forEach(botao=>{
+
+  botao.addEventListener('click', ()=>{
+
+    botoesCert.forEach(btn=>{
+
+      btn.classList.remove('ativo-cert');
+
+    });
+
+    areasCert.forEach(area=>{
+
+      area.classList.remove('ativo-area');
+
+    });
+
+    botao.classList.add('ativo-cert');
+
+    const alvo =
+    botao.getAttribute('data-cert');
+
+    document
+    .getElementById(alvo)
+    .classList.add('ativo-area');
+
+  });
+
+});
