@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HTML & CSS</title>
+
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/0c49ca79fb.js" crossorigin="anonymous"></script>
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+
+      font-family:'Poppins', sans-serif;
+
+      background:
+      linear-gradient(135deg,#0f172a,#111827,#1e293b);
+
+      min-height:100vh;
+
+      color:white;
+
+      overflow-x:hidden;
+
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header{
+
+      width:100%;
+
+      padding:25px;
+
+      background:
+      rgba(15,23,42,.85);
+
+      backdrop-filter:blur(10px);
+
+      border-bottom:2px solid #ff5a1f;
+
+      position:sticky;
+      top:0;
+
+      z-index:999;
+
+      box-shadow:0 5px 20px rgba(0,0,0,.3);
+
+    }
+
+    header h1{
+
+      text-align:center;
+
+      font-size:2.5em;
+
+      color:#ffffff;
+
+      letter-spacing:2px;
+
+    }
+
+    header h1 span{
+
+      color:#ff5a1f;
+
+    }
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    main{
+
+      width:100%;
+      max-width:1300px;
+
+      margin:auto;
+
+      padding:50px 20px;
+
+    }
+
+    .titulo{
+
+      text-align:center;
+
+      margin-bottom:50px;
+
+    }
+
+    .titulo h2{
+
+      font-size:2.2em;
+
+      margin-bottom:10px;
+
+    }
+
+    .titulo p{
+
+      color:#cbd5e1;
+
+      font-size:1.05em;
+
+    }
+
+    /* =========================
+       GRID
+    ========================= */
+
+    .container{
+
+      display:grid;
+
+      grid-template-columns:
+      repeat(auto-fit,minmax(280px,1fr));
+
+      gap:30px;
+
+    }
+
+    /* =========================
+       CARD
+    ========================= */
+
+    .card{
+
+      background:
+      rgba(15,23,42,.85);
+
+      border:1px solid rgba(255,255,255,.08);
+
+      border-radius:20px;
+
+      padding:30px 25px;
+
+      transition:.4s;
+
+      position:relative;
+
+      overflow:hidden;
+
+      box-shadow:
+      0 10px 30px rgba(0,0,0,.35);
+
+    }
+
+    .card::before{
+
+      content:"";
+
+      position:absolute;
+
+      top:0;
+      left:-100%;
+
+      width:100%;
+      height:100%;
+
+      background:
+      linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.08),
+        transparent
+      );
+
+      transition:.7s;
+
+    }
+
+    .card:hover::before{
+
+      left:100%;
+
+    }
+
+    .card:hover{
+
+      transform:
+      translateY(-10px)
+      scale(1.02);
+
+      border-color:#ff5a1f;
+
+      box-shadow:
+      0 20px 40px rgba(0,0,0,.5);
+
+    }
+
+    /* =========================
+       ÍCONE
+    ========================= */
+
+    .icone{
+
+      width:75px;
+      height:75px;
+
+      margin:auto auto 20px auto;
+
+      border-radius:20px;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      font-size:2.5em;
+
+      background:
+      linear-gradient(135deg,#ff5a1f,#ff7b52);
+
+      color:white;
+
+      box-shadow:
+      0 10px 25px rgba(255,90,31,.35);
+
+    }
+
+    /* =========================
+       TEXTOS
+    ========================= */
+
+    .card h3{
+
+      text-align:center;
+
+      font-size:1.4em;
+
+      margin-bottom:12px;
+
+    }
+
+    .card p{
+
+      text-align:center;
+
+      color:#cbd5e1;
+
+      line-height:1.7em;
+
+      font-size:.95em;
+
+      margin-bottom:25px;
+
+    }
+
+    /* =========================
+       BOTÕES
+    ========================= */
+
+    .botoes{
+
+      display:flex;
+
+      flex-direction:column;
+
+      gap:12px;
+
+    }
+
+    /* BOTÃO PROJETO */
+
+    .btn-projeto{
+
+      display:block;
+
+      text-align:center;
+
+      text-decoration:none;
+
+      background:
+      linear-gradient(135deg,#ff5a1f,#ff7b52);
+
+      color:white;
+
+      padding:14px;
+
+      border-radius:12px;
+
+      font-weight:600;
+
+      transition:.3s;
+
+    }
+
+    .btn-projeto:hover{
+
+      transform:scale(1.05);
+
+      box-shadow:
+      0 10px 25px rgba(255,90,31,.4);
+
+    }
+
+    /* BOTÃO REPOSITÓRIO */
+
+    .btn-repo{
+
+      display:flex;
+
+      justify-content:center;
+
+      align-items:center;
+
+      gap:10px;
+
+      text-decoration:none;
+
+      padding:13px;
+
+      border-radius:12px;
+
+      color:white;
+
+      border:1px solid rgba(255,255,255,.15);
+
+      background:
+      rgba(255,255,255,.03);
+
+      transition:.3s;
+
+    }
+
+    .btn-repo:hover{
+
+      background:
+      rgba(255,255,255,.08);
+
+      transform:translateY(-3px);
+
+    }
+
+    .btn-repo i{
+
+      font-size:1.1em;
+
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer{
+
+      text-align:center;
+
+      padding:30px 20px;
+
+      color:#cbd5e1;
+
+      font-size:.95em;
+
+    }
+
+    /* =========================
+       RESPONSIVO
+    ========================= */
+
+    @media screen and (max-width:768px){
+
+      header h1{
+
+        font-size:2em;
+
+      }
+
+      .titulo h2{
+
+        font-size:1.8em;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+
+    <h1>
+      🚀 <span>HTML</span> & CSS
+    </h1>
+
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- TÍTULO -->
+    <section class="titulo">
+
+      <h2>
+        Meus Exercícios e Projetos
+      </h2>
+
+      <p>
+        Alguns projetos desenvolvidos durante meus estudos de JAVA.
+      </p>
+
+    </section>
+
+    <!-- CARDS -->
+    <section class="container">
+
+      <!-- CARD 1 -->
+      <div class="card">
+
+        <div class="icone">
+          <i class="fa-solid fa-calculator"></i>
+        </div>
+
+        <h3>
+          Calculadora
+        </h3>
+
+        <p>
+          Primeiro projeto simples usando JavaFX.
+        </p>
+
+        <div class="botoes">
+
+          <a href="site-tecnologia/" class="btn-projeto">
+            Abrir Projeto
+          </a>
+
+          <a href="https://github.com/" class="btn-repo" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            Repositório
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card">
+
+        <div class="icone">
+          <i class="fa-solid fa-book-open"></i>
+        </div>
+
+        <h3>
+          Site Cordel
+        </h3>
+
+        <p>
+          Projeto inspirado em poemas com efeito parallax e estilização moderna.
+        </p>
+
+        <div class="botoes">
+
+          <a href="site cordel/" class="btn-projeto">
+            Abrir Projeto
+          </a>
+
+          <a href="https://github.com/" class="btn-repo" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            Repositório
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card">
+
+        <div class="icone">
+          <i class="fa-solid fa-table"></i>
+        </div>
+
+        <h3>
+          Tabelas
+        </h3>
+
+        <p>
+          Exercícios focados em criação e estilização de tabelas em HTML.
+        </p>
+
+        <div class="botoes">
+
+          <a href="tabelas-básicas/tabela-teste-1/" class="btn-projeto">
+            Abrir Projeto
+          </a>
+
+          <a href="https://github.com/" class="btn-repo" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            Repositório
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="card">
+
+        <div class="icone">
+          <i class="fa-solid fa-mobile-screen"></i>
+        </div>
+
+        <h3>
+          Rede Social
+        </h3>
+
+        <p>
+          Projeto simulando uma interface moderna de rede social responsiva.
+        </p>
+
+        <div class="botoes">
+
+          <a href="site-rede-social/teste5/" class="btn-projeto">
+            Abrir Projeto
+          </a>
+
+          <a href="https://github.com/" class="btn-repo" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            Repositório
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="card">
+
+        <div class="icone">
+          <i class="fa-solid fa-user-plus"></i>
+        </div>
+
+        <h3>
+          Cadastro
+        </h3>
+
+        <p>
+          Formulário de cadastro com design moderno e organizado.
+        </p>
+
+        <div class="botoes">
+
+          <a href="cadastro/testeformulario/" class="btn-projeto">
+            Abrir Projeto
+          </a>
+
+          <a href="https://github.com/" class="btn-repo" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            Repositório
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="card">
+
+        <div class="icone">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+
+        <h3>
+          Tela Login
+        </h3>
+
+        <p>
+          Tela de login estilizada utilizando HTML e CSS responsivo.
+        </p>
+
+        <div class="botoes">
+
+          <a href="tela-login/login/index.html" class="btn-projeto">
+            Abrir Projeto
+          </a>
+
+          <a href="https://github.com/" class="btn-repo" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            Repositório
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 7 -->
+     
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+
+    Desenvolvido por Mateus Araújo 🚀
+
+  </footer>
+
+</body>
+
+</html>
